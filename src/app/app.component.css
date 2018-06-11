@@ -1,0 +1,82 @@
+/* AppComponent's private CSS styles */
+h1 {
+  font-size: 3.2em;
+  color: #000;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h3 {
+  text-align: center; margin-bottom: 0;
+}
+h4 {
+  position: relative;
+}
+.grid {
+  margin: 0;
+}
+.col-1-4 {
+  width: 50%;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+body {
+  background:#2E9CE6;
+  padding: 3em;
+  font-family: 'Raleway', 'Arial';
+  color:#fff;
+}
+ul {
+  list-style-type:none;
+  margin:0 0 2em 0;
+  padding:0;
+}
+ul li {
+  
+  margin-right: 30px;
+}
+ul li a {
+  font-size: 1.5em;
+}
+
+#navigation li a:hover
+{
+	padding-left: 10px;
+	background-position:left;
+	background-repeat:no-repeat;
+	color: #0099cc;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+

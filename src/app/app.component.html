@@ -1,0 +1,84 @@
+
+<div class="container-fluid">
+  <div class="row-fluid">
+   
+<div class="col-lg-6">
+  
+    <div class="card">
+        <div class="card-body">
+      <h1>Items</h1>
+      <table class="table table-hover">
+          <thead>
+          <tr class="text-center">
+              <th scope="row">
+       <div class="input-group">        
+     <form class="example-form">
+      
+      <input #itemName class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"  placeholder="Type name here"/>
+    
+  </form>
+   </div>
+      <!-- (click) passes input value to add() and then clears the input -->
+    </th>
+      <th scope="row">
+      <button (click)="add(itemName.value); itemName.value=''" class="btn btn-info float-right">
+        Add new
+      </button>
+    </th>
+    </tr>
+  </thead>
+  </table>
+  <div id="navigation">
+<ul  class="list-group list-group-flush align-items-justify" >
+  <li class="list-group-item" *ngFor="let item of items " (click)="onSelect(item)" [ngClass]="{active: isActive(item)}" >
+   
+    <a > 
+       <span class=" text-dark">{{item.name}}</span>   <span class="badge badge-info badge-pill">{{item.comments.length}}</span>
+    </a>
+    <button class="btn btn-outline-danger my-2 my-sm-0 float-right" type="submit"
+    (click)="delete(item)">delete</button>
+  </li>
+</ul>
+</div>
+</div>
+</div> 
+</div>
+
+
+
+
+<div class="col-lg-6">
+   
+  
+    <div class="card">
+        <div class="card-body">
+      <h1>Comments #2</h1>
+ 
+  <ul class="list-group">
+      <li class="list-group-item"  *ngFor="let coment of comments "  >
+           
+   {{coment}}
+    
+      </li>
+    </ul>
+   
+    <div class="input-group">
+    <form class="example-form">
+        
+    <textarea #box (keyup.control.enter)="addComent(box.value)" class="form-control" aria-label="With textarea"  rows="4">
+     
+    </textarea>
+  
+   </form>
+  </div>
+</div>
+</div>
+  </div>
+
+  </div> 
+ 
+
+</div>
+
+
+
